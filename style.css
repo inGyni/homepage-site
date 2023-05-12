@@ -1,0 +1,112 @@
+* {
+    --dark-theme: #171717;
+    --dark-theme-text: #fff;
+
+    --light-theme: #f5f5f5;
+    --light-theme-text: #000;
+
+    --text-name-color: #0ea5e9;
+}
+
+@font-face{
+    font-family: ArialFont;
+    src: local("Arial");
+    size-adjust: 107.4%
+}
+
+body{
+    background-color: var(--dark-theme);
+    color: var(--dark-theme-text);
+    margin: 0;
+    line-height: inherit;
+    font-family: "ArialFont", Arial, sans-serif;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 42rem;
+    min-height: 100vh;
+    place-content: center
+}
+
+.container h1, h2 {
+    margin: 0
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    grid-gap: 1rem;
+    gap: 1rem;
+}
+
+.socials a {
+    color: inherit;
+    text-decoration: inherit
+}
+
+.socials a svg {
+    height: 24px;
+    width: 24px;
+    color: inherit
+}
+
+.text-subtitle {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 300;
+
+    text-align: center;
+}
+
+.text-title {
+    font-size: 3.75rem;
+    line-height: 1;
+    font-weight: 700;
+    line-height: 1.25;
+
+    text-align: center;
+}
+
+.text-name-color {
+    color: var(--text-name-color);
+}
+
+.sites-list {
+    margin: 1.75rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    margin: 0 1rem;
+    background: rgb(65, 66, 68);;
+    border-radius: 3px;
+    padding: 10px 18px;
+    transition: transform .1s;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 300;
+    text-decoration: none;
+    color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--dark-theme);
+        color: var(--dark-theme-text);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: var(--light-theme);
+        color: var(--light-theme-text);
+    }
+}
